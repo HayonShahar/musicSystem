@@ -1,0 +1,858 @@
+body{
+  overflow-x: hidden;
+}
+
+.loginContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 120vh;
+  background: #3498db;
+  color: #fff;
+}
+
+.slogan{
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: 50px;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.slogan span{
+  color: #2ecc71;
+}
+
+.loginForm, .registerLinkDiv, .loginLinkDiv {
+  width: 300px;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background: #fff;
+}
+
+.registerLinkDiv, .loginLinkDiv {
+  padding: 5px;
+  margin-top: 20px;
+  color: black;
+  text-align: center;
+  font-size: 15px;
+  margin-top: 10px;
+}
+
+.registerLink, .loginLink {
+  color: #2ecc71;
+  text-decoration: none;
+}
+
+.link {
+  text-decoration: none;
+  color: #2980b9;
+}
+
+.registerLink:hover, .loginLink:hover, .link:hover {
+  font-weight: bold;
+}
+
+.loginForm h1{
+ color: #000000;
+}
+
+.inputField {
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.loginBTN {
+  background: #2ecc71;
+  color: #fff;
+  padding: 10px;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.registerContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 120vh;
+  background: #3498db;
+  color: #fff;
+}
+
+.registerContainer .slogan {
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: 50px;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.registerContainer .slogan span {
+  color: #2ecc71;
+}
+
+.registerForm {
+  width: 300px;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background: #fff;
+  margin-top: 20px;
+}
+
+.registerForm h1 {
+  color: #000000;
+}
+
+.registerBTN {
+  background: #2ecc71;
+  color: #fff;
+  padding: 10px;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+}
+
+.adminBTN {
+  position: absolute;
+  top: 0;
+  left: -50px; 
+  margin-left: 5px;
+  margin-top: 5px;
+  padding: 10px 15px;
+  font-size: 10px;
+  font-weight: 900;
+  background-color: rgba(255, 255, 255, 0);
+  color: #3498db;
+  border: none;
+  border-radius: 5px;
+  transition: left 0.7s ease;
+}
+
+.adminBTN:hover {
+  color: #fff;
+  left: 0;
+  background-color: #2980b9;
+  cursor: pointer;
+}
+
+.adminInfoItem {
+  text-align: center;
+  margin: 20px;
+  padding: 20px;
+  border: 2px solid #3498db;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  margin-bottom: 15px;
+  font-size: 16px;
+  color: #3498db;
+}
+
+.adminInfoItem input {
+  border: none;
+  border-bottom: solid 2px #3498db;
+}
+
+.infoLabel {
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+#password {
+  font-size: 20px;
+  border: solid 2px #000000;
+  border-radius: 5px;
+}
+
+.eventsDiv {
+  text-align: center;
+  display: grid;
+  justify-content: center;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px; 
+}
+
+.eventsDivEdit{
+  text-align: center;
+  display: grid;
+  justify-content: center;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px; 
+}
+
+.eventsDiv .event {
+  border: solid 2px #3498db;
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.eventsDivEdit .event {
+  border: solid 2px #3498db;
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.eventsDiv .event:hover {
+  background-color: rgba(52, 152, 219, 0.2);
+  transform: scale(1.02);
+}
+
+.event:hover {
+  cursor: pointer;
+}
+
+.event:focus {
+  cursor: auto;
+}
+
+.deleteSongEvents {
+  text-align: center;
+  justify-content: center;
+}
+
+.deleteSongEvents .deleteSongEvent {
+  width: auto;
+  height: auto;
+  margin-bottom:  20px;
+  border: solid 2px #3498db;
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+.deleteSongEventShow {
+  width: auto;
+  height: auto;
+  margin-bottom:  20px;
+  border: solid 2px #3498db;
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.deleteSongEvents .deleteSongEvent:hover {
+  background-color: rgba(52, 152, 219, 0.2);
+  transform: scale(1.02);
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.deleteSongEvent, .event {
+  animation: slideIn 0.5s ease-in-out; /* Adjust the duration and easing as needed */
+}
+
+.owner {
+  animation: slideIn 1.5s ease-in-out; /* Adjust the duration and easing as needed */
+}
+
+
+.deleteSongEvent .owner {
+  margin-bottom: 20px;
+}
+
+.deleteSongEvent:hover {
+  cursor: pointer;
+}
+
+.deleteSongEvent:focus {
+  cursor: auto;
+}
+
+.songDelete {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+
+.deleteSongLikes{
+  margin-right: 10px;
+  font-size: 10px;
+  border-radius: 5px;
+  background-color: green;
+  top: 5px;
+  right: 5px;
+  padding: 5px;
+  color: white;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+ 
+.eventsSongs.hide{
+  display: none;
+}
+
+.eventsSongs.show{
+  display: block;
+}
+
+.deleteEvent {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  padding: 5px;
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.editEventBTN {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  padding: 5px;
+  background-color: #e7a53c;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.editEventBTN:hover {
+  background-color: #FFF;
+  color: #e7a53c;
+}
+
+.eventsDivEdit.hide {
+  display: none;
+}
+
+.editForm.hide {
+  display: none;
+}
+
+.editForm, .addEventContainer, .editEventMassage{
+  display: flex;
+  justify-content: center;
+}
+
+.cancelEditForm{
+  text-align: center;
+  margin-top: 30px;
+}
+
+.deleteSongBTN {
+  margin-left: 10px;
+  font-size: 10px;
+  top: 5px;
+  right: 5px;
+  padding: 5px;
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.deleteSongBTN:hover {
+  background-color: #fff;
+  color: #e74c3c;
+}
+
+.eventData {
+  display: grid;
+  padding: 15px;
+}
+
+.eventData span {
+  margin-bottom: 10px;
+}
+
+.owner {
+  font-weight: bold;
+  color: #3498db;
+}
+
+.adminSettingsContainer button{
+  margin-top: 10px;
+  padding: 5px;
+  font-size: 10px;
+  background-color: #3498db;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.adminSettingsContainer span {
+  color: #3498db;
+}
+
+.adminSettingsContainer button:hover {
+  background-color: #2980b9;;
+  font-size: 11px;
+}
+.securityQuestionAnswerPass{
+  text-align: center;
+}
+
+.securityQuestionAnswerPass h1{
+  margin-top: 0;
+  color:#3498db;
+}
+
+.securityQuestionAnswerPass h3, .securityQuestionAnswerPass h2{
+  margin-bottom: 0;
+}
+
+.securityQuestionAnswerPass input{
+  margin-top: 0;
+  width: 500px;
+  height: 30px;
+  border: none;
+  border-bottom: solid 2px #3498db;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.securityQuestionAnswerPass button{
+  margin-top: 10px;
+  padding: 10px;
+  font-size: 15px;
+  background-color: #3498db;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.securityQuestionAnswerPass button:hover {
+  background-color: #2980b9;;
+  font-size: 16px;
+}
+
+.adminSettingsTitle{
+  text-align: center;
+}
+
+.date, .eventType, .musicPreferences, .phone {
+  color: #555;
+}
+
+.addEventContainer form, .editEventDiv form {
+  display: flex;
+  border: 1px solid #ccc;
+  box-shadow: 0 0 10px #3498db;
+  padding: 30px;
+  border-radius: 8px;
+  width: 300px;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.addEventContainer button, .editEventDiv button, .editForm button {
+  margin-top: 10px;
+  padding: 10px;
+  font-size: 15px;
+  background-color: #3498db;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.addEventContainer button:hover, .editEventDiv button:hover, .editForm button:hover {
+  background-color: #2980b9;;
+  font-size: 16px;
+}
+
+.rotateOut {
+  animation: slideDownOut 1s ease-in-out;
+}
+  
+@keyframes slideDownOut {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(150%);
+  }
+}
+
+.newEventSeved {
+  margin-top: 150px;
+}
+
+.rotateIn {
+  animation: slideIn 1s ease-in-out;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+.error{
+  color: red;
+ font-size: 12px;
+}
+
+.sidebar {
+  height: 100%;
+  width: 0;
+  background-color: #3498db;
+  position: fixed;
+  left: 0;
+  top: 0;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 100px;
+}
+
+.sidebar .bottomSidebar {
+  margin-top: 10%;
+}
+
+.bottomSidebar button:hover {
+  color: red;
+  font-weight: bold;
+}
+
+.sidebar button {
+  background-color: #3498db;
+  border: none;
+  width: 100%;
+  padding: 15px 20px;
+  font-size: 18px;
+  color: #fff;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidebar button:hover {
+  background-color: #2980b9;
+  font-weight: bold;
+}
+
+
+.content {
+  margin-left: 0;
+  transition: margin-left 0.5s;
+  padding: 0 20px 30px 20px;
+}
+
+.openBTN {
+  font-size: 30px;
+  cursor: pointer;
+  position: absolute;
+  left: 20px;
+  top: 20px;
+  z-index: 1;
+  color: #fff;
+  border: none;
+  background-color: rgba(255, 255, 255, 0);
+}
+
+.clock {
+  text-align: center;
+  font-size: 20px;
+  cursor: pointer;
+  position: absolute;
+  left: 50%;
+  top: 20px;
+  transform: translateX(-50%);
+  z-index: 1;
+  color: #fff;
+  border: none;
+  background-color: rgba(255, 255, 255, 0);
+}
+
+.clock #date{
+  font-size: 12px;
+}
+
+
+.blackWave {
+  margin-bottom: -10px;
+}
+
+.blueWave {
+  margin-top: -10px;
+  z-index: -1
+}
+
+.waveDiv {
+  position: relative;
+  padding-top: 230px;
+  background-color: #3498db;
+  transition: padding-top 1s ease;
+}
+
+.waveDiv.searchPerformed {
+  padding-top: 50px;
+}
+
+.homeContainer {
+  height: auto;
+}
+
+.search {
+  height: auto;
+  padding: 0 100px 0 100px;
+}
+
+.youtubeSearch{
+  text-align: center;
+  margin-top: -45px;
+}
+
+.youtubeSearch.searchPerformed {
+  margin-top: 20px;
+  height: auto;
+}
+
+.youtubeSearch h1{
+  color: #fff;
+  font-family: 'Work Sans', sans-serif;
+  font-size: 45px;
+  text-transform: uppercase;
+  line-height: 1;
+}
+
+.youtubeSearch input {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+
+.youtubeSearch button {
+  padding: 10px 15px;
+  font-size: 15px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+}
+
+.youtubeSearch button:hover {
+  background-color: rgb(11, 64, 93);
+}
+
+.youTubeVideo {
+  position: relative;
+  z-index: 1;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  overflow: hidden;
+}
+
+.youTubeVideo p {
+  font-weight: bold;
+  margin: 10px;
+}
+
+.youTubeVideo iframe {
+  width: 100%;
+  height: 315px;
+}
+
+.youTubeVideo button {
+  width: 100%;
+  padding: 10px;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.youTubeVideo button:hover {
+  background-color: #2980b9;
+}
+
+.trophy {
+  margin-left: 10px;
+}
+
+.songList {
+  color: #3498db;
+  height: auto;
+  background-color: black;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  text-align: center;
+  padding: 50px;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.songInList {
+  width: 500px;
+  display: flex;
+  justify-content:space-between;
+  align-items: baseline;
+  list-style: none;
+}
+
+.index {
+  margin-top: 20px;
+  margin-right: 10px;
+}
+
+
+.backBTN {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+}
+
+.selectedSongContainer {
+  text-align: center;
+  align-items: stretch;
+}
+
+.selectedSongContainer p{
+  font-size: 55px;
+}
+
+.selectedSong {
+  height: auto;
+  text-align: center;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.selectedSong.hidden {
+  height: 700px;
+}
+
+.selectedSong h1 {
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.selectedSong iframe {
+  width: 100%;
+  height: 315px;
+  margin-bottom: 20px;
+}
+
+.selectedSongform {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.selectedSong h3 {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.selectedSong input {
+  margin-bottom: 10px;
+  padding: 8px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+.selectedSong button {
+  padding: 10px 20px;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.selectedSong button:hover {
+  background-color: #2980b9;
+}
+
+.hidden {
+  display: none;
+}
+
+.likeBTN {
+  display: flex;
+  align-items: center;
+  font-size: 15px;
+  color: #2980b9;
+  border: none;
+  background-color:unset;
+}
+
+.likeBTN i{
+  margin-left: 5px;
+}
+
+.likeBTN span {
+  font-size: 18px;
+  margin-right: 5px;
+}
+
+.likeBTN:hover {
+  border-radius: 50px;
+  background-color: #297fb93e;
+}
+
+.footerContainer {
+  background-color: black;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+.footerContainer p {
+  font-size: 12px;
+  margin-right: 10px;
+}
+
+.logo {
+  font-family: courier, "courier new", monospace;
+  margin-left: 10px;
+  margin-bottom: 10px; 
+}
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
